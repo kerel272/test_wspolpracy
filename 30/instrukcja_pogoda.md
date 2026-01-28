@@ -48,7 +48,4 @@ Program **Pogoda** umożliwia szybkie sprawdzenie aktualnej temperatury i prędk
 - Jeśli wpiszesz niepoprawną nazwę miasta, program wyświetli komunikat błędu.
 - W przypadku problemów z internetem lub usługą wttr.in, program również wyświetli odpowiedni komunikat.
 
----
-
-✅ **Testowane dla miasta Katowice.**
 
