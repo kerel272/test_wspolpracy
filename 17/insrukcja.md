@@ -1,96 +1,128 @@
 # Instrukcja obsługi programu Pogoda
 
-## 1. Informacje ogólne
-Program **Pogoda** jest aplikacją napisaną w języku Python, która umożliwia sprawdzenie aktualnych warunków pogodowych dla wybranego miasta. Program pobiera dane z serwisu **wttr.in**, dzięki czemu nie wymaga użycia klucza API ani zakładania konta w zewnętrznym serwisie.
+## 1. Opis programu
+Program **Pogoda** to aplikacja napisana w języku Python, która umożliwia sprawdzenie aktualnej temperatury oraz prędkości wiatru dla wybranego miasta.  
+Dane pogodowe pobierane są z serwisu **wttr.in**, dzięki czemu program **nie wymaga klucza API**.
 
-Program został przetestowany dla miasta **Katowice (Polska)** i działa zarówno w trybie tekstowym, jak i graficznym.
+Program został przetestowany dla miasta **Katowice (PL)**.
 
 ---
 
-## 2. Funkcje programu
+## 2. Funkcjonalności programu
 Program umożliwia:
-- sprawdzenie aktualnej temperatury powietrza,
-- sprawdzenie prędkości wiatru,
+- pobieranie aktualnej temperatury powietrza,
+- pobieranie prędkości wiatru,
 - wybór jednostek europejskich (°C, m/s),
 - wybór jednostek amerykańskich (°F, mph),
-- uruchomienie programu w trybie tekstowym (CLI),
-- uruchomienie programu w trybie graficznym (GUI).
+- pracę w trybie tekstowym (CLI),
+- pracę w trybie graficznym (GUI).
 
 ---
 
-## 3. Wymagania systemowe
-Do poprawnego działania programu wymagane są:
-- Python w wersji 3.x,
-- biblioteka `requests`,
-- biblioteka `tkinter` (standardowo dostępna w Pythonie).
+## 3. Wymagania
+Do uruchomienia programu potrzebne są:
+- Python w wersji 3.x
+- biblioteka `requests`
+- biblioteka `tkinter`
 
-Instalacja biblioteki `requests`:
+### Instalacja biblioteki `requests`
+```bash
 pip install requests
+```
 
 ---
 
 ## 4. Uruchamianie programu
-Program uruchamia się z poziomu terminala poleceniem:
-python3 pogoda.py
 
-Jeżeli nie zostaną podane żadne argumenty, program wyświetli pomoc dotyczącą dostępnych opcji.
+### Plik programu
+```text
+pogoda.py
+```
+
+### Podstawowe uruchomienie
+```bash
+python3 pogoda.py
+```
+
+Po uruchomieniu bez argumentów program wyświetli pomoc z dostępnymi opcjami.
 
 ---
 
 ## 5. Tryb tekstowy (CLI)
 
-### 5.1 Sprawdzenie pogody dla Katowic
-Aby sprawdzić pogodę dla Katowic, należy wpisać:
+### Sprawdzenie pogody dla Katowic
+```bash
 python3 pogoda.py --city Katowice --country PL
+```
 
-Program wyświetli aktualną temperaturę oraz prędkość wiatru.
+### Przykładowy wynik
+```text
+Temperatura: 18.2°C
+Prędkość wiatru: 3.4 m/s
+```
 
-### 5.2 Jednostki miary
-Domyślnie program korzysta z jednostek europejskich:
-- temperatura w stopniach Celsjusza (°C),
-- prędkość wiatru w metrach na sekundę (m/s).
-
-Aby użyć jednostek amerykańskich, należy wpisać:
+### Jednostki amerykańskie
+```bash
 python3 pogoda.py --city Katowice --country PL --units imperial
+```
 
 ---
 
 ## 6. Tryb graficzny (GUI)
-Program może zostać uruchomiony w trybie graficznym za pomocą polecenia:
+
+### Uruchomienie trybu graficznego
+```bash
 python3 pogoda.py --gui
+```
 
-Po uruchomieniu pojawi się okno programu.
+### Obsługa programu
+1. Wpisz nazwę miasta:
+```text
+Katowice
+```
+2. Wpisz kod kraju:
+```text
+PL
+```
+3. Wybierz jednostki:
+```text
+Europejskie (°C, m/s) lub Amerykańskie (°F, mph)
+```
+4. Kliknij przycisk:
+```text
+Pokaż pogodę
+```
 
-### 6.1 Obsługa okna
-1. W polu **Miasto** wpisz: Katowice  
-2. W polu **Kraj** wpisz: PL  
-3. Wybierz system jednostek:
-   - Europejskie (°C, m/s)
-   - Amerykańskie (°F, mph)
-4. Kliknij przycisk **Pokaż pogodę**
-
-Wynik zostanie wyświetlony w dolnej części okna.
+Wynik zostanie wyświetlony w oknie programu.
 
 ---
 
 ## 7. Obsługa błędów
-Program posiada podstawową obsługę błędów. Komunikat błędu pojawi się w następujących sytuacjach:
-- nie podano nazwy miasta,
-- podano nieprawidłową nazwę miasta,
+Program wyświetla komunikat błędu w następujących przypadkach:
+- brak podanej nazwy miasta,
+- nieprawidłowa nazwa miasta,
 - brak połączenia z Internetem,
-- problem z pobraniem danych z serwera.
+- problem z pobraniem danych pogodowych.
 
-W trybie graficznym błąd zostanie pokazany w oknie dialogowym, natomiast w trybie tekstowym w konsoli.
-
----
-
-## 8. Przykład użycia
-Przykład sprawdzenia pogody dla miasta Katowice:
-python3 pogoda.py --city Katowice --country PL
-
-Program zwróci informacje o aktualnej temperaturze oraz prędkości wiatru.
+W trybie GUI błąd wyświetlany jest w oknie dialogowym, a w trybie CLI w terminalu.
 
 ---
 
-## 9. Podsumowanie
-Program **Pogoda** jest prostym i intuicyjnym narzędziem do sprawdzania aktualnych danych pogodowych. Dzięki wykorzystaniu serwisu wttr.in nie wymaga klucza API, a możliwość wyboru trybu pracy (tekstowy lub graficzny) sprawia, że jest wygodny w użyciu.
+## 8. Przykład pełnego użycia
+```bash
+python3 pogoda.py --city Katowice --country PL --units metric
+```
+
+---
+
+## 9. Możliwości rozbudowy
+Program można w przyszłości rozbudować o:
+- wyświetlanie wilgotności powietrza,
+- prognozę pogody na kilka dni,
+- zapisywanie wyników do pliku,
+- automatyczne wykrywanie kraju.
+
+---
+
+## 10. Podsumowanie
+Program **Pogoda** jest prostym i czytelnym narzędziem do sprawdzania aktualnych warunków pogodowych. Dzięki wykorzystaniu serwisu wttr.in nie wymaga klucza API i może być używany zarówno w terminalu, jak i w trybie graficznym.
