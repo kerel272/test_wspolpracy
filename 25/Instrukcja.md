@@ -1,7 +1,7 @@
 # Instrukcja obsługi programu do sprawdzania pogody
 
 ## Opis Programu
-Program pozwala na sprawdzenie temperatury i prędkości wiatru dla wybranego miasta.
+Program pozwala na sprawdzenie temperatury i prędkości wiatru dla wybranego miasta korzystając z serwisu [wttr.in](wttr.in).
 
 ## Wymagania techniczne
 - Python 3.X
@@ -20,7 +20,7 @@ Komendę należy poprzedzić słowem `python`, `python3` lub `py` w zależności
 - Wybór jednostek metrycznych lub imperialnych
 - Wyświetlanie w trybie konsolowym lub graficznym
 - Nie wymaga klucza API
-- 
+
 ---------------------------------
 
 ## Działanie programu
