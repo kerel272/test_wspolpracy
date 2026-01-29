@@ -1,4 +1,4 @@
-# Instrukcja użytkowania programu „Pogoda”**
+# Instrukcja użytkowania programu „Pogoda”
 
 ### Informacje o programie
 
