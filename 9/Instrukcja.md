@@ -18,8 +18,6 @@
 8. [Źródło danych pogodowych](#8-źródło-danych-pogodowych)
 9. [Obsługa błędów i komunikaty](#9-obsługa-błędów-i-komunikaty)
 10. [Najczęstsze problemy (FAQ)](#10-najczęstsze-problemy-faq)
-11. [Licencja i przeznaczenie](#11-licencja-i-przeznaczenie)
-12. [Podsumowanie](#12-podsumowanie)
 
 ------------------------------------------------------------------------
 
