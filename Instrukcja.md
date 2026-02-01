@@ -208,17 +208,3 @@ sudo apt install python3-tk
 ```
 
 ------------------------------------------------------------------------
-
-## 11. Licencja i przeznaczenie
-
-Program: - korzysta z publicznego API **wttr.in**, - jest przeznaczony
-do użytku edukacyjnego i prywatnego, - może być dowolnie modyfikowany na
-własne potrzeby.
-
-------------------------------------------------------------------------
-
-## 12. Podsumowanie
-
-Program **Pogoda** to lekka i funkcjonalna aplikacja
-pogodowa, idealna do nauki Pythona, pracy z API oraz tworzenia prostych
-interfejsów graficznych.
