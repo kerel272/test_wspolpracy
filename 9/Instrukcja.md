@@ -41,10 +41,12 @@ udostępnia aktualne informacje pogodowe w formacie JSON.
 
 ## 2. Funkcjonalności programu
 
-Program umożliwia: - sprawdzanie **aktualnej temperatury powietrza**, -
-sprawdzanie **prędkości wiatru**, - wybór **jednostek metrycznych lub
-imperialnych**, - podanie miasta wraz z **opcjonalnym kodem kraju**, -
-obsługę zarówno przez **interfejs graficzny**, jak i **linię
+Program umożliwia:  
+- sprawdzanie **aktualnej temperatury powietrza**,  
+- sprawdzanie **prędkości wiatru**,  
+- wybór **jednostek metrycznych lub imperialnych**,  
+- podanie miasta wraz z **opcjonalnym kodem kraju**,  
+- obsługę zarówno przez **interfejs graficzny**, jak i **linię
 poleceń**, - czytelne komunikaty błędów w języku polskim.
 
 ------------------------------------------------------------------------
@@ -75,11 +77,11 @@ pip install requests
 
 ## 4. Struktura programu
 
-Program składa się z następujących elementów: - funkcji `get_weather()`
--- pobieranie i przeliczanie danych pogodowych, - funkcji `show_gui()`
--- obsługa interfejsu graficznego, - funkcji `main()` -- obsługa
-argumentów wiersza poleceń, - sekcji startowej
-`if __name__ == "__main__":`.
+Program składa się z następujących elementów:  
+- funkcji `get_weather()` -- pobieranie i przeliczanie danych pogodowych, 
+- funkcji `show_gui()` -- obsługa interfejsu graficznego,  
+- funkcji `main()` -- obsługa argumentów wiersza poleceń, 
+- sekcji startowej `if __name__ == "__main__":`.
 
 ------------------------------------------------------------------------
 
@@ -173,12 +175,15 @@ opóźnione lub niedokładne.
 
 ## 9. Obsługa błędów i komunikaty
 
-Program wyświetli komunikat błędu w przypadku: - braku połączenia z
-internetem, - nieprawidłowej nazwy miasta, - pustego pola miasta w
-GUI, - problemów z odpowiedzią serwera.
+Program wyświetli komunikat błędu w przypadku: 
+- braku połączenia z internetem, 
+- nieprawidłowej nazwy miasta, 
+- pustego pola miasta w GUI, 
+- problemów z odpowiedzią serwera.
 
-Komunikaty błędów są prezentowane: - w GUI -- w oknie dialogowym, - w
-CLI -- w standardowym wyjściu błędów.
+Komunikaty błędów są prezentowane: 
+- w GUI -- w oknie dialogowym, 
+- w CLI -- w standardowym wyjściu błędów.
 
 ------------------------------------------------------------------------
 
