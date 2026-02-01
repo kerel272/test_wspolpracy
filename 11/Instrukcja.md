@@ -1,6 +1,6 @@
 # Aplikacja „Pogoda”
 
-Prosta aplikacja do sprawdzania aktualnej temperatury i prędkości wiatru dla dowolnego miasta — bez konieczności używania klucza API. Dane pobierane są z serwisu **wttr.in**.
+Prosta aplikacja do sprawdzania aktualnej temperatury i prędkości wiatru dla dowolnego miasta. Dane pobierane są z serwisu **wttr.in**.
 
 ---
 
