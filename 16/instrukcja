@@ -1,54 +1,128 @@
-# 🌤️ Aplikacja Pogoda
+````md
+# 🌤️ Program **Pogoda**
 
-Prosta aplikacja w języku Python do sprawdzania aktualnych warunków pogodowych. Program pobiera dane z serwisu `wttr.in`, dzięki czemu **nie wymaga posiadania własnego klucza API**.
+Program **Pogoda** to prosta aplikacja w Pythonie do sprawdzania aktualnej temperatury i prędkości wiatru dla wybranego miasta.  
+Dane pogodowe pobierane są z serwisu **wttr.in** – **bez użycia klucza API**.
 
----
-
-## 🚀 Funkcje
-* **Dwa tryby pracy:** Graficzny (GUI) oraz tekstowy (CLI).
-* **Jednostki:** Obsługa systemu metrycznego (°C, m/s) oraz imperialnego (°F, mph).
-* **Lokalizacja:** Możliwość uściślenia wyszukiwania poprzez podanie kodu kraju.
-
----
-
-## 🛠️ Instalacja i wymagania
-
-1.  Upewnij się, że masz zainstalowanego **Pythona 3.x**.
-2.  Zainstaluj wymaganą bibliotekę `requests`:
-    ```bash
-    pip install requests
-    ```
+Aplikacja działa w dwóch trybach:
+- **konsolowym (CLI)**
+- **graficznym (GUI – Tkinter)**
 
 ---
 
-## 🖥️ Instrukcja obsługi
+## 📦 Wymagania
 
-### 1. Tryb Graficzny (GUI)
-Idealny dla osób preferujących obsługę myszką. Aby uruchomić:
+- Python **3.8+**
+- Dostęp do internetu
+- Zainstalowane biblioteki:
+  - `requests`
+  - `tkinter` (zwykle dostępny domyślnie w Pythonie)
+
+Instalacja wymaganej biblioteki:
 ```bash
-python nazwa_pliku.py --gui
+pip install requests
+````
 
-Instrukcja:
- * Wpisz nazwę miasta (np. Katowice).
- * (Opcjonalnie) Wpisz kod kraju (np. PL).
- * Wybierz system jednostek.
- * Kliknij Pokaż pogodę.
-2. Tryb Wiersza Poleceń (CLI)
-Szybki podgląd pogody bezpośrednio w terminalu.
-| Komenda | Opis |
-|---|---|
-| python nazwa_pliku.py --city Katowice | Sprawdza pogodę dla Katowic (domyślnie °C) |
-| python nazwa_pliku.py --city Katowice --units imperial | Sprawdza pogodę w °F i mph |
-| python nazwa_pliku.py --help | Wyświetla pomoc i listę wszystkich flag |
-🧪 Przykład testowy: Katowice
-Aby przetestować działanie aplikacji, wykonaj poniższe kroki:
- * Uruchom terminal i wpisz:
-   python nazwa_pliku.py --city Katowice --country PL
+---
 
- * Oczekiwany wynik:
-   Temperatura: 12.0°C
-Prędkość wiatru: 4.5 m/s
+## 🚀 Uruchomienie programu
 
-⚠️ Rozwiązywanie problemów
- * Błąd połączenia: Upewnij się, że Twój firewall nie blokuje połączeń wychodzących do wttr.in.
- * Błędna lokalizacja: Jeśli program nie znajduje miasta, spróbuj dodać kod kraju w formacie ISO (np. Berlin,DE zamiast samego Berlin).
+Plik uruchamialny:
+
+```bash
+python3 pogoda.py
+```
+
+---
+
+## 🖥️ Tryb konsolowy (CLI)
+
+### Składnia
+
+```bash
+python3 pogoda.py --city MIASTO [--country KOD_KRAJU] [--units metric|imperial]
+```
+
+### Dostępne parametry
+
+| Parametr    | Opis                                        |
+| ----------- | ------------------------------------------- |
+| `--city`    | Nazwa miasta (wymagane)                     |
+| `--country` | Kod kraju, np. `PL`, `US` (opcjonalne)      |
+| `--units`   | `metric` (°C, m/s) lub `imperial` (°F, mph) |
+
+---
+
+### ✅ Przykład testowy – Katowice
+
+```bash
+python3 pogoda.py --city Katowice --country PL
+```
+
+Przykładowy wynik:
+
+```text
+Temperatura: 18.4°C
+Prędkość wiatru: 3.2 m/s
+```
+
+---
+
+### 🇺🇸 Jednostki amerykańskie
+
+```bash
+python3 pogoda.py --city Katowice --country PL --units imperial
+```
+
+Przykładowy wynik:
+
+```text
+Temperatura: 65.1°F
+Prędkość wiatru: 7.1 mph
+```
+
+---
+
+## 🪟 Tryb graficzny (GUI)
+
+Aby uruchomić aplikację z oknem graficznym:
+
+```bash
+python3 pogoda.py --gui
+```
+
+### Instrukcja obsługi GUI
+
+1. Wpisz **miasto** (np. `Katowice`)
+2. (Opcjonalnie) wpisz **kod kraju** (`PL`)
+3. Wybierz jednostki:
+
+   * Europejskie (°C, m/s)
+   * Amerykańskie (°F, mph)
+4. Kliknij **„Pokaż pogodę”**
+
+Wynik pojawi się w oknie aplikacji.
+
+---
+
+## ⚠️ Obsługa błędów
+
+Program wyświetli komunikat błędu, gdy:
+
+* nie podano miasta
+* brak połączenia z internetem
+* podano nieprawidłową nazwę miasta
+
+---
+
+## ℹ️ Informacje dodatkowe
+
+* Dane pogodowe pochodzą z: [https://wttr.in](https://wttr.in)
+* Program nie wymaga rejestracji ani klucza API
+* Idealny do nauki:
+
+  * obsługi argumentów CLI (`argparse`)
+  * pracy z API HTTP
+  * tworzenia GUI w `tkinter`
+
+
