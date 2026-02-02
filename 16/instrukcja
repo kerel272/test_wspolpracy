@@ -1,74 +1,58 @@
-# Instrukcja obsługi programu "Pogoda"
+# 🌤️ Aplikacja Pogoda
 
-Aplikacja umożliwia szybkie sprawdzenie aktualnych warunków pogodowych (temperatury oraz prędkości wiatru) bez konieczności posiadania klucza API, korzystając z serwisu `wttr.in`. Program oferuje dwa tryby pracy: **graficzny (GUI)** oraz **wiersza poleceń (CLI)**.
-
-## 1. Wymagania systemowe
-
-* Zainstalowany **Python 3.x**.
-* Biblioteka `requests` (można ją zainstalować komendą: `pip install requests`).
-* Połączenie z internetem.
+Prosta aplikacja w języku Python do sprawdzania aktualnych warunków pogodowych. Program pobiera dane z serwisu `wttr.in`, dzięki czemu **nie wymaga posiadania własnego klucza API**.
 
 ---
 
-## 2. Sposoby uruchomienia
+## 🚀 Funkcje
+* **Dwa tryby pracy:** Graficzny (GUI) oraz tekstowy (CLI).
+* **Jednostki:** Obsługa systemu metrycznego (°C, m/s) oraz imperialnego (°F, mph).
+* **Lokalizacja:** Możliwość uściślenia wyszukiwania poprzez podanie kodu kraju.
 
-### A. Interfejs Graficzny (GUI)
+---
 
-Najwygodniejszy sposób dla użytkowników preferujących okienka.
+## 🛠️ Instalacja i wymagania
 
-1. Otwórz terminal/konsolę w folderze z programem.
-2. Uruchom program komendą:
+1.  Upewnij się, że masz zainstalowanego **Pythona 3.x**.
+2.  Zainstaluj wymaganą bibliotekę `requests`:
+    ```bash
+    pip install requests
+    ```
+
+---
+
+## 🖥️ Instrukcja obsługi
+
+### 1. Tryb Graficzny (GUI)
+Idealny dla osób preferujących obsługę myszką. Aby uruchomić:
 ```bash
 python nazwa_pliku.py --gui
 
-```
+Instrukcja:
+ * Wpisz nazwę miasta (np. Katowice).
+ * (Opcjonalnie) Wpisz kod kraju (np. PL).
+ * Wybierz system jednostek.
+ * Kliknij Pokaż pogodę.
+2. Tryb Wiersza Poleceń (CLI)
+Szybki podgląd pogody bezpośrednio w terminalu.
+| Komenda | Opis |
+|---|---|
+| python nazwa_pliku.py --city Katowice | Sprawdza pogodę dla Katowic (domyślnie °C) |
+| python nazwa_pliku.py --city Katowice --units imperial | Sprawdza pogodę w °F i mph |
+| python nazwa_pliku.py --help | Wyświetla pomoc i listę wszystkich flag |
+🧪 Przykład testowy: Katowice
+Aby przetestować działanie aplikacji, wykonaj poniższe kroki:
+ * Uruchom terminal i wpisz:
+   python nazwa_pliku.py --city Katowice --country PL
 
+ * Oczekiwany wynik:
+   Temperatura: 12.0°C
+Prędkość wiatru: 4.5 m/s
 
-3. W polu **Miasto** wpisz `Katowice`.
-4. Wybierz jednostki (Europejskie dla °C i m/s).
-5. Kliknij przycisk **Pokaż pogodę**.
+⚠️ Rozwiązywanie problemów
+ * Błąd połączenia: Upewnij się, że Twój firewall nie blokuje połączeń wychodzących do wttr.in.
+ * Błędna lokalizacja: Jeśli program nie znajduje miasta, spróbuj dodać kod kraju w formacie ISO (np. Berlin,DE zamiast samego Berlin).
+Autor: Twoje Imię/Nick
 
-### B. Wiersz poleceń (CLI)
+Czy chciałbyś, abym przygotował również plik `README.md` z opisem technicznym struktury kodu?
 
-Szybki sposób na sprawdzenie pogody bez otwierania okien.
-
-* **Podstawowe zapytanie:**
-```bash
-python nazwa_pliku.py --city Katowice
-
-```
-
-
-* **Zapytanie z określeniem kraju i jednostek imperialnych:**
-```bash
-python nazwa_pliku.py --city Katowice --country PL --units imperial
-
-```
-
-
-
----
-
-## 3. Przykładowy test: Katowice
-
-Aby upewnić się, że program działa poprawnie, wykonaj poniższy test:
-
-| Parametr | Wartość testowa | Oczekiwany wynik |
-| --- | --- | --- |
-| **Miasto** | Katowice | Wyświetlenie danych dla Katowic |
-| **Kraj** | PL | Precyzyjne wskazanie lokalizacji w Polsce |
-| **Jednostki** | metric | Temp. w **°C**, Wiatr w **m/s** |
-
-**Przykładowy komunikat zwrotny:**
-
-> Temperatura: 5.0°C
-> Prędkość wiatru: 3.2 m/s
-
----
-
-## 4. Rozwiązywanie problemów
-
-* **Błąd: "Nie udało się pobrać pogody..."**: Sprawdź, czy masz połączenie z internetem oraz czy nazwa miasta nie zawiera literówek.
-* **Błąd: `ModuleNotFoundError: No module named 'requests'**`: Zainstaluj brakującą bibliotekę komendą `pip install requests`.
-
----
