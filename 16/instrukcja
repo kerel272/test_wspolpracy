@@ -52,7 +52,3 @@ Prędkość wiatru: 4.5 m/s
 ⚠️ Rozwiązywanie problemów
  * Błąd połączenia: Upewnij się, że Twój firewall nie blokuje połączeń wychodzących do wttr.in.
  * Błędna lokalizacja: Jeśli program nie znajduje miasta, spróbuj dodać kod kraju w formacie ISO (np. Berlin,DE zamiast samego Berlin).
-Autor: Twoje Imię/Nick
-
-Czy chciałbyś, abym przygotował również plik `README.md` z opisem technicznym struktury kodu?
-
