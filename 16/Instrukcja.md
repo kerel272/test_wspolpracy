@@ -1,121 +1,127 @@
-````md
-# 🌤️ Program Pogoda
+# Instrukcja obsługi – Pogoda (bez klucza API)
 
-Program **Pogoda** to prosta aplikacja napisana w języku Python, służąca do sprawdzania aktualnej temperatury oraz prędkości wiatru dla wybranego miasta.  
-Dane pogodowe pobierane są z serwisu **wttr.in** i **nie wymagają klucza API**.
+## Opis programu
+Program **Pogoda (bez klucza!)** to aplikacja napisana w języku Python, która umożliwia sprawdzanie aktualnej temperatury oraz prędkości wiatru dla wybranego miasta.  
+Dane pogodowe pobierane są z serwisu **wttr.in**, dzięki czemu **nie jest wymagany żaden klucz API**.
 
-Program działa w dwóch trybach:
-- tryb konsolowy (CLI)
-- tryb graficzny (GUI – Tkinter)
+Program może działać:
+- w **trybie konsolowym (CLI)**,
+- w **trybie graficznym (GUI)** opartym o bibliotekę `tkinter`.
 
 ---
 
-## 📦 Wymagania
+## Wymagania
+Aby uruchomić program, wymagane są:
 
-- Python 3.8 lub nowszy
+- Python **3.8 lub nowszy**
 - Dostęp do internetu
-- Biblioteki:
+- Zainstalowane biblioteki:
   - `requests`
-  - `tkinter` (zwykle dostępny domyślnie)
+  - `tkinter` (zwykle dostępna domyślnie w Pythonie)
 
-Instalacja biblioteki `requests`:
+### Instalacja wymaganych bibliotek
+Jeśli biblioteka `requests` nie jest zainstalowana, należy ją dodać poleceniem:
 ```bash
 pip install requests
 ````
 
 ---
 
-## 🚀 Uruchomienie programu
+## Uruchamianie programu
+
+Plik programu należy uruchamiać z poziomu terminala / wiersza poleceń:
 
 ```bash
-python3 pogoda.py
+python pogoda.py [opcje]
 ```
 
 ---
 
-## 🖥️ Tryb konsolowy (CLI)
+## Tryb graficzny (GUI)
 
-### Składnia:
+Aby uruchomić aplikację w trybie graficznym, należy użyć flagi:
 
 ```bash
-python3 pogoda.py --city MIASTO [--country KOD_KRAJU] [--units metric|imperial]
+python pogoda.py --gui
 ```
 
-### Parametry:
+### Obsługa GUI
 
-* `--city` – nazwa miasta (wymagane)
-* `--country` – kod kraju, np. `PL`, `US` (opcjonalne)
-* `--units` – jednostki:
+1. Wpisz **nazwę miasta** (np. `Katowice`).
+2. Opcjonalnie wpisz **kod kraju** (np. `PL`).
+3. Wybierz jednostki:
 
-  * `metric` – stopnie Celsjusza (°C) i m/s
-  * `imperial` – stopnie Fahrenheita (°F) i mph
+   * Europejskie: °C i m/s
+   * Amerykańskie: °F i mph
+4. Kliknij przycisk **„Pokaż pogodę”**.
+5. Wynik zostanie wyświetlony w oknie aplikacji.
 
 ---
 
-### ✅ Przykład testowy – Katowice
+## Tryb konsolowy (CLI)
+
+### Podstawowe użycie
 
 ```bash
-python3 pogoda.py --city Katowice --country PL
+python pogoda.py --city Katowice
 ```
 
-Przykładowy wynik:
-
-```
-Temperatura: 18.4°C
-Prędkość wiatru: 3.2 m/s
-```
-
----
-
-### 🇺🇸 Jednostki amerykańskie
+### Z kodem kraju
 
 ```bash
-python3 pogoda.py --city Katowice --country PL --units imperial
+python pogoda.py --city Katowice --country PL
 ```
 
-Przykładowy wynik:
-
-```
-Temperatura: 65.1°F
-Prędkość wiatru: 7.1 mph
-```
-
----
-
-## 🪟 Tryb graficzny (GUI)
-
-Uruchomienie trybu graficznego:
+### Jednostki amerykańskie
 
 ```bash
-python3 pogoda.py --gui
+python pogoda.py --city Katowice --country PL --units imperial
 ```
 
-### Obsługa GUI:
+### Dostępne argumenty
 
-1. Wpisz miasto (np. Katowice)
-2. Opcjonalnie wpisz kod kraju (PL)
-3. Wybierz jednostki (europejskie lub amerykańskie)
-4. Kliknij przycisk **„Pokaż pogodę”**
-
-Wynik zostanie wyświetlony w oknie aplikacji.
+| Argument    | Opis                               |
+| ----------- | ---------------------------------- |
+| `--city`    | Nazwa miasta                       |
+| `--country` | Kod kraju (np. PL, DE, US)         |
+| `--units`   | `metric` (domyślne) lub `imperial` |
+| `--gui`     | Uruchamia interfejs graficzny      |
 
 ---
 
-## ⚠️ Obsługa błędów
+## Wyświetlane dane
 
-Program wyświetla komunikaty błędów w przypadku:
+Program wyświetla:
 
-* braku nazwy miasta
-* braku połączenia z internetem
-* nieprawidłowej nazwy miasta
+* **Temperaturę**
+
+  * °C w trybie `metric`
+  * °F w trybie `imperial`
+* **Prędkość wiatru**
+
+  * m/s w trybie `metric`
+  * mph w trybie `imperial`
 
 ---
 
-## ℹ️ Informacje dodatkowe
+## Obsługa błędów
 
-* Źródło danych pogodowych: [https://wttr.in](https://wttr.in)
-* Program nie wymaga rejestracji ani klucza API
-* Projekt edukacyjny w Pythonie
-* Testowane dla miasta **Katowice**
+Program wyświetli komunikat błędu w następujących przypadkach:
 
-```
+* nie podano nazwy miasta,
+* podano nieistniejące miasto,
+* brak połączenia z internetem,
+* serwis `wttr.in` jest chwilowo niedostępny.
+
+W trybie graficznym błędy pojawiają się w oknach dialogowych,
+natomiast w trybie konsolowym jako komunikaty w terminalu.
+
+---
+
+## Uwagi techniczne
+
+* Program korzysta z publicznego API serwisu `wttr.in` w formacie JSON.
+* Dane pogodowe są aktualne, jednak nie stanowią oficjalnej prognozy meteorologicznej.
+* Aplikacja nie zapisuje żadnych danych lokalnie.
+
+---
