@@ -71,7 +71,7 @@ Przykłady użycia:
 
 Miasto + jednostki metryczne (domyślne)
 ```
-python pogoda.py --city Kraków
+python pogoda.py --city Katowice
 ```
 
 Miasto + kraj
