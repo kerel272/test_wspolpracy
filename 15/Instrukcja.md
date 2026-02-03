@@ -1,6 +1,6 @@
 # Instrukcja do programu do sprawdzania pogody napisanego w języku Python
 
-Dane pogodowe pobierane są z serwisu wttr.in, który nie wymagaja klucza API.
+Dane pogodowe pobierane są z serwisu wttr.in.
 
 Wymagania systemowe
 
@@ -26,7 +26,7 @@ python nazwa_pliku.py
 
 Obsługa
 
-W polu Miasto wpisz nazwę miasta (np. Warszawa)
+W polu Miasto wpisz nazwę miasta (np. Katowice)
 
 Opcjonalnie w polu Kraj wpisz kod kraju:
 
@@ -101,8 +101,6 @@ Program wyświetli komunikat błędu, gdy:
 Informacje techniczne:
 
 -Dane pogodowe: https://wttr.in
-
--Brak potrzeby klucza API
 
 -Interfejs graficzny oparty na Tkinter
 
