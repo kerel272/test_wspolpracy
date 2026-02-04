@@ -1,89 +1,78 @@
-Instrukcja obsługi programu „Pogoda (bez klucza API)” – przykład: Katowice
-1. Opis programu
+#  Instrukcja obsługi programu Pogoda
 
-Program umożliwia sprawdzenie aktualnej temperatury oraz prędkości wiatru dla wybranego miasta.
-Dane pobierane są z serwisu wttr.in, bez konieczności używania klucza API.
+Program **Pogoda** umożliwia sprawdzenie aktualnej temperatury oraz
+prędkości wiatru dla wybranego miasta. Dane pobierane są z serwisu
+**wttr.in** (bez potrzeby używania klucza API).
 
-Program działa w dwóch trybach:
+------------------------------------------------------------------------
 
-graficznym (GUI)
+##  Wymagania
 
-konsolowym (terminal)
+-   Python 3.7 lub nowszy
+-   Biblioteka `requests`
 
-2. Wymagania
+Instalacja:
 
-Python 3.x
+    pip install requests
 
-dostęp do Internetu
+------------------------------------------------------------------------
 
-biblioteki:
+##  Uruchamianie programu
 
-requests
+### Tryb graficzny (GUI)
 
-tkinter
+    python pogoda.py --gui
 
-3. Uruchamianie programu
-🔹 Tryb graficzny (GUI)
+1.  Wpisz miasto: **Katowice**
+2.  (Opcjonalnie) wpisz kraj: **PL**
+3.  Wybierz jednostki
+4.  Kliknij „Pokaż pogodę"
 
-Uruchomienie programu:
+------------------------------------------------------------------------
 
-python pogoda.py --gui
+### Tryb konsolowy (CLI)
 
+Podstawowe użycie:
 
-Instrukcja krok po kroku:
+    python pogoda.py --city Katowice --country PL
 
-W polu Miasto wpisz:
+Jednostki amerykańskie:
 
-Katowice
+    python pogoda.py --city Katowice --country PL --units imperial
 
+------------------------------------------------------------------------
 
-W polu Kraj wpisz (opcjonalnie):
+##  Test dla miasta Katowice
 
-PL
+    python pogoda.py --city Katowice --country PL
 
+Przykładowy wynik:
 
-Wybierz system jednostek:
+    Temperatura: 5.2°C
+    Prędkość wiatru: 3.4 m/s
 
-Europejskie (°C, m/s) – domyślny
+------------------------------------------------------------------------
 
-Amerykańskie (°F, mph)
+##  Dostępne argumenty
 
-Kliknij przycisk „Pokaż pogodę”
+  Argument    Opis
+  ----------- -----------------------------------------
+  --city      Nazwa miasta
+  --country   Kod kraju (np. PL, US)
+  --units     metric (°C, m/s) lub imperial (°F, mph)
+  --gui       Uruchamia tryb graficzny
 
-Program wyświetli aktualną temperaturę i prędkość wiatru dla Katowic.
+------------------------------------------------------------------------
 
-🔹 Tryb konsolowy (terminal)
+##  Obsługa błędów
 
-Podstawowe uruchomienie dla Katowic:
+Program wyświetli komunikat o błędzie, gdy: - nie podano miasta - brak
+połączenia z internetem - podano niepoprawną nazwę miasta
 
-python pogoda.py --city Katowice
+------------------------------------------------------------------------
 
+##  Jak działa program?
 
-Z podanym krajem:
-
-python pogoda.py --city Katowice --country PL
-
-
-Z jednostkami amerykańskimi:
-
-python pogoda.py --city Katowice --country PL --units imperial
-
-4. Przykładowy wynik w konsoli
-Temperatura: 12.4°C
-Prędkość wiatru: 3.1 m/s
-
-
-(lub w jednostkach amerykańskich):
-
-Temperatura: 54.3°F
-Prędkość wiatru: 6.9 mph
-
-5. Obsługa błędów
-
-Program wyświetli komunikat błędu, gdy:
-
-nie zostanie wpisana nazwa miasta
-
-podane miasto nie istnieje
-
-brak połączenia z Internetem
+1.  Wysyła zapytanie do: https://wttr.in/{miasto}?format=j1
+2.  Odczytuje dane JSON
+3.  Wyświetla temperaturę i prędkość wiatru
