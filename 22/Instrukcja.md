@@ -11,32 +11,35 @@
 5. [Sposoby uruchamiania programu](#5-sposoby-uruchamiania-programu)
 6. [Argumenty wiersza poleceń](#6-argumenty-wiersza-poleceń)
 7. [Jednostki miar](#7-jednostki-miar)
-8. [Przykład działania dla miasta Katowice](#8-przyklad-dzialania-dla-miasta-katowice)
-9. [Obsługa błędów](#9-obsluga-bledow)
-10. [Najczęstsze problemy](#10-najczestsze-problemy)
+8. [Przykład działania dla miasta Katowice](#katowice)
+9. [Obsługa błędów](#bledy)
+10. [Najczęstsze problemy](#problemy)
 
 ---
 
 ## 1. Wprowadzenie
 
-Program **Pogoda** to aplikacja napisana w języku Python umożliwiająca sprawdzanie aktualnej temperatury oraz prędkości wiatru dla dowolnego miasta.
-Aplikacja:
+Program **Pogoda** jest narzędziem napisanym w języku Python, służącym do sprawdzania aktualnych warunków pogodowych dla wybranego miasta na świecie.
+Aplikacja została zaprojektowana tak, aby:
 
-* nie wymaga klucza API,
-* korzysta z darmowego serwisu **wttr.in**,
-* działa w trybie tekstowym (CLI) oraz graficznym (GUI).
+* nie wymagać klucza API,
+* być prosta w obsłudze,
+* działać w trybie konsolowym (CLI) oraz graficznym (GUI).
+
+Źródłem danych jest publiczny serwis **wttr.in**, udostępniający informacje pogodowe w formacie JSON.
 
 ---
 
 ## 2. Funkcjonalności programu
 
-Program pozwala na:
+Program umożliwia:
 
-* pobranie aktualnej temperatury powietrza,
-* odczyt prędkości wiatru,
-* wybór jednostek: metrycznych lub imperialnych,
-* podanie miasta z opcjonalnym kodem kraju,
-* obsługę przez okno graficzne lub terminal.
+* sprawdzanie aktualnej temperatury powietrza,
+* sprawdzanie prędkości wiatru,
+* wybór jednostek metrycznych lub imperialnych,
+* podanie miasta wraz z opcjonalnym kodem kraju,
+* obsługę przez interfejs graficzny lub linię poleceń,
+* wyświetlanie komunikatów błędów w języku polskim.
 
 ---
 
@@ -44,16 +47,16 @@ Program pozwala na:
 
 ### 3.1 Oprogramowanie
 
-* Python 3.8+
-* system Windows / Linux / macOS
+* Python 3.8 lub nowszy
+* Windows / Linux / macOS
 * dostęp do internetu
 
 ### 3.2 Wymagane biblioteki
 
 * requests
-* tkinter (standardowo z Pythonem)
+* tkinter
 
-Instalacja biblioteki:
+Instalacja:
 
 ```
 pip install requests
@@ -63,11 +66,12 @@ pip install requests
 
 ## 4. Struktura programu
 
-Najważniejsze elementy kodu:
+Program zawiera:
 
-* `get_weather()` – pobiera dane z serwisu wttr.in i przelicza jednostki,
-* `show_gui()` – tworzy interfejs graficzny,
-* `main()` – obsługuje argumenty wiersza poleceń.
+* funkcję `get_weather()` – pobieranie danych z wttr.in,
+* funkcję `show_gui()` – obsługa interfejsu graficznego,
+* funkcję `main()` – obsługa argumentów CLI,
+* blok startowy `if __name__ == "__main__":`.
 
 ---
 
@@ -81,16 +85,17 @@ Uruchomienie:
 python pogoda.py --gui
 ```
 
-W oknie należy:
+Elementy okna:
 
-1. wpisać nazwę miasta (np. Katowice),
-2. opcjonalnie kod kraju (PL),
-3. wybrać jednostki,
-4. kliknąć **Pokaż pogodę**.
+1. Pole „Miasto” – wymagane
+2. Pole „Kraj” – opcjonalne (np. PL)
+3. Wybór jednostek
+4. Przycisk „Pokaż pogodę”
+5. Pole z wynikami
 
 ### 5.2 Tryb tekstowy (CLI)
 
-Przykładowe uruchomienia:
+Przykłady:
 
 ```
 python pogoda.py --city Katowice
@@ -108,28 +113,30 @@ python pogoda.py --city Katowice --units imperial
 
 ## 6. Argumenty wiersza poleceń
 
-| Argument  | Opis              | Przykład |
-| --------- | ----------------- | -------- |
-| --city    | nazwa miasta      | Katowice |
-| --country | kod kraju         | PL       |
-| --units   | metric / imperial | metric   |
-| --gui     | uruchom GUI       | –        |
+| Argument  | Opis              |
+| --------- | ----------------- |
+| --city    | nazwa miasta      |
+| --country | kod kraju         |
+| --units   | metric / imperial |
+| --gui     | uruchom GUI       |
 
 ---
 
 ## 7. Jednostki miar
 
-**Metric:**
+**System metryczny**
 
-* temperatura – °C
-* wiatr – m/s
+* temperatura: °C
+* wiatr: m/s
 
-**Imperial:**
+**System imperialny**
 
-* temperatura – °F
-* wiatr – mph
+* temperatura: °F
+* wiatr: mph
 
 ---
+
+<a id="katowice"></a>
 
 ## 8. Przykład działania dla miasta Katowice
 
@@ -148,23 +155,27 @@ Prędkość wiatru: 3.5 m/s
 
 W GUI należy wpisać:
 
-* Miasto: *Katowice*
-* Kraj: *PL*
+* Miasto: Katowice
+* Kraj: PL
 
 ---
+
+<a id="bledy"></a>
 
 ## 9. Obsługa błędów
 
 Program wyświetli komunikat gdy:
 
-* brak internetu,
-* wpisano błędną nazwę miasta,
-* pole miasta jest puste (GUI),
-* serwis wttr.in nie odpowiada.
+* brak połączenia z internetem,
+* podano nieprawidłową nazwę miasta,
+* pole miasta jest puste,
+* serwer wttr.in nie odpowiada.
 
-W CLI błędy pojawiają się w terminalu, w GUI – w oknie dialogowym.
+W CLI błędy pojawiają się w terminalu, a w GUI – w oknie dialogowym.
 
 ---
+
+<a id="problemy"></a>
 
 ## 10. Najczęstsze problemy
 
@@ -176,8 +187,7 @@ pip install requests
 
 ### GUI nie uruchamia się
 
-* sprawdzić czy zainstalowany jest tkinter,
-* na Linux:
+Na Linuxie:
 
 ```
 sudo apt-get install python3-tk
@@ -185,10 +195,13 @@ sudo apt-get install python3-tk
 
 ### Nie znaleziono miasta
 
-* spróbować z kodem kraju: `Katowice --country PL`.
+Użyć kodu kraju:
+
+```
+python pogoda.py --city Katowice --country PL
+```
 
 ---
 
-**Autor instrukcji:** użytkownik programu
 **Źródło danych:** [https://wttr.in](https://wttr.in)
 **Miasto testowe:** Katowice
