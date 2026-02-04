@@ -2,8 +2,7 @@
 
 ## Opis programu
 
-Program „Pogoda” służy do sprawdzania aktualnej temperatury oraz prędkości wiatru dla wybranego miasta. Dane pogodowe pobierane są ze strony **wttr.in**, więc program nie wymaga klucza API.   
-Program może działać w trybie tekstowym lub w trybie graficznym.
+Program „Pogoda” służy do sprawdzania aktualnej temperatury oraz prędkości wiatru dla wybranego miasta. Dane pogodowe pobierane są ze strony **wttr.in**.
 
 ## Wymagania
 
