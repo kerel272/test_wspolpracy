@@ -1,5 +1,24 @@
 # Instrukcja obsługi programu „Pogoda”
 
+## Spis treści
+
+1. [Opis programu](#opis-programu)
+2. [Wymagania](#wymagania)
+3. [Uruchamianie programu](#uruchamianie-programu)
+   - [Tryb tekstowy (konsola)](#tryb-tekstowy-konsola)
+   - [Tryb graficzny (GUI)](#tryb-graficzny-gui)
+4. [Obsługa programu](#obsługa-programu)
+5. [Przykłady użycia](#przykłady-użycia)
+6. [Dostępne opcje](#dostępne-opcje)
+7. [Przykładowy wynik](#przykładowy-wynik)
+8. [Obsługa błędów](#obsługa-błędów)
+   - [Brak wpisanego miasta](#brak-wpisanego-miasta)
+   - [Błędna nazwa miasta](#błędna-nazwa-miasta)
+   - [Brak połączenia z internetem](#brak-połączenia-z-internetem)
+   - [Problem z serwisem pogodowym](#problem-z-serwisem-pogodowym)
+   - [Brak wymaganych bibliotek](#brak-wymaganych-bibliotek)
+9. [Słownik pojęć](#słownik-pojęć)
+
 ## Opis programu
 
 Program „Pogoda” służy do sprawdzania aktualnej temperatury oraz prędkości wiatru dla wybranego miasta. Dane pogodowe pobierane są ze strony **wttr.in**.
@@ -19,18 +38,19 @@ Jeżeli biblioteka `requests` nie jest zainstalowana, należy wpisać:
 
 ## Uruchamianie programu
 
+### Tryb tekstowy (konsola)
+
 Program uruchamia się z konsoli poleceniem:
 
 `python pogoda.py`
 
-## Tryb graficzny (GUI)
+### Tryb graficzny (GUI)
 
-### Uruchomienie
 Aby uruchomić program w oknie graficznym:
 
 `python pogoda.py --gui`
 
-### Obsługa programu
+## Obsługa programu
 1. Wpisz nazwę miasta (np. Katowice)  
 2. Opcjonalnie wpisz kod kraju (np. PL)  
 3. Wybierz jednostki:
@@ -39,13 +59,9 @@ Aby uruchomić program w oknie graficznym:
 4. Kliknij przycisk **„Pokaż pogodę”**  
 5. Odczytaj wynik w oknie programu  
 
-## Tryb tekstowy (konsola)
-
-### Przykład użycia
+## Przykłady użycia
 
 `python pogoda.py --city Katowice --country PL`
-
-### Jednostki amerykańskie
 
 `python pogoda.py --city Katowice --country PL --units imperial`
 
@@ -102,8 +118,6 @@ W trakcie korzystania z programu mogą pojawić się różne błędy. Program in
 **GUI** – okno programu, w którym użytkownik może wpisywać dane i klikać przyciski.  
 
 **Konsola** – tryb tekstowy, w którym program uruchamia się za pomocą poleceń.  
-
-**API** – sposób pobierania danych z internetu (w tym programie nie jest wymagany klucz).  
 
 **Jednostki metryczne** – stopnie Celsjusza (°C) i metry na sekundę (m/s).  
 
