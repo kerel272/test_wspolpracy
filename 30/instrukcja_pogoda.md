@@ -154,7 +154,7 @@ python pogoda.py --city NewYork --country US --units imperial
 
 Program korzysta z publicznego serwisu:
 - **https://wttr.in**
-
+- Testy zostały przeprowadzona dla miasta Katowice
 Dane pobierane są w formacie JSON i przedstawiają aktualne warunki
 pogodowe.
 
