@@ -141,5 +141,5 @@ Błąd: Nie udało się pobrać pogody dla 'Xyz'. Sprawdź nazwę lub połączen
 
 ---
 
-**Autor programu:** `pogoda.py`  
+
 **Źródło danych:** https://wttr.in
