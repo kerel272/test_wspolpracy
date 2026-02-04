@@ -204,4 +204,5 @@ python pogoda.py --city Katowice --country PL
 ---
 
 **Źródło danych:** [https://wttr.in](https://wttr.in)
+
 **Miasto testowe:** Katowice
