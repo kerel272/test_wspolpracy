@@ -190,5 +190,6 @@ sudo apt-get install python3-tk
 ---
 
 **Źródło danych:** [https://wttr.in](https://wttr.in)
+
 **Miasto testowe:** Katowice
 
