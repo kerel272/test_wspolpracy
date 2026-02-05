@@ -2,9 +2,6 @@
 
 ## 1. Opis programu
 Program **Pogoda** to aplikacja napisana w języku Python, która umożliwia sprawdzenie aktualnej temperatury oraz prędkości wiatru dla wybranego miasta.  
-Dane pogodowe pobierane są z serwisu **wttr.in**, dzięki czemu program **nie wymaga klucza API**.
-
-Program został przetestowany dla miasta **Katowice (PL)**.
 
 ---
 
