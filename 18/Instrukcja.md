@@ -12,7 +12,7 @@
 
 ## Opis programu
 
-**Pogoda** to prosty program w Pythonie, który pozwala szybko sprawdzić aktualną temperaturę i prędkość wiatru dla wybranego miasta. Dane pobierane są z serwisu **wttr.in*. 
+**Pogoda** to program w Pythonie, który pozwala  sprawdzić aktualną temperaturę i prędkość wiatru dla wybranego miasta. Dane pobierane są z serwisu **wttr.in*. 
 
 Program działa w dwóch trybach:
 
