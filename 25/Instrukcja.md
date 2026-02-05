@@ -19,7 +19,6 @@ Komendę należy poprzedzić słowem `python`, `python3` lub `py` w zależności
 - Wybór miasta dla którego chce się sprawdzić pogodę
 - Wybór jednostek metrycznych lub imperialnych
 - Wyświetlanie w trybie konsolowym lub graficznym
-- Nie wymaga klucza API
 
 ---------------------------------
 
