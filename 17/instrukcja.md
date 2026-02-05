@@ -115,11 +115,3 @@ python3 pogoda.py --city Katowice --country PL --units metric
 
 ---
 
-## 9. Możliwości rozbudowy
-Program można w przyszłości rozbudować o:
-- wyświetlanie wilgotności powietrza,
-- prognozę pogody na kilka dni,
-- zapisywanie wyników do pliku,
-- automatyczne wykrywanie kraju.
-
----
