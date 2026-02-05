@@ -123,6 +123,3 @@ Program można w przyszłości rozbudować o:
 - automatyczne wykrywanie kraju.
 
 ---
-
-## 10. Podsumowanie
-Program **Pogoda** jest prostym i czytelnym narzędziem do sprawdzania aktualnych warunków pogodowych. Dzięki wykorzystaniu serwisu wttr.in nie wymaga klucza API i może być używany zarówno w terminalu, jak i w trybie graficznym.
