@@ -7,14 +7,12 @@
 4. [Tryb tekstowy (CLI)](#tryb-tekstowy-cli)
 5. [Prezentowane dane](#prezentowane-dane)
 6. [Obsługa błędów](#obsługa-błędów)
-7. [Uwagi końcowe](#uwagi-końcowe)
-8. [Autor i testy](#autor-i-testy)
 
 ---
 
 ## Opis programu
 
-**Pogoda** to prosty program w Pythonie, który pozwala szybko sprawdzić aktualną temperaturę i prędkość wiatru dla wybranego miasta. Dane pobierane są z serwisu **wttr.in**, co oznacza, że nie potrzeba żadnego klucza API.  
+**Pogoda** to prosty program w Pythonie, który pozwala szybko sprawdzić aktualną temperaturę i prędkość wiatru dla wybranego miasta. Dane pobierane są z serwisu **wttr.in*. 
 
 Program działa w dwóch trybach:
 
