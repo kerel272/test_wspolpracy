@@ -9,8 +9,8 @@
    - [Tryb graficzny (GUI)](#tryb-graficzny-gui)
 4. [Obsługa programu](#obsługa-programu)
 5. [Przykłady użycia](#przykłady-użycia)
-6. [Dostępne opcje](#dostępne-opcje)
-7. [Przykładowy wynik](#przykładowy-wynik)
+6. [Przykładowy wynik](#przykładowy-wynik)
+7. [Dostępne opcje](#dostępne-opcje)
 8. [Obsługa błędów](#obsługa-błędów)
    - [Brak wpisanego miasta](#brak-wpisanego-miasta)
    - [Błędna nazwa miasta](#błędna-nazwa-miasta)
@@ -65,6 +65,13 @@ Aby uruchomić program w oknie graficznym:
 
 `python pogoda.py --city Katowice --country PL --units imperial`
 
+## Przykładowy wynik
+
+```text
+Temperatura: 18.2°C
+Prędkość wiatru: 3.5 m/s
+```
+
 ## Dostępne opcje
 
 | Opcja         | Opis                      |
@@ -74,13 +81,6 @@ Aby uruchomić program w oknie graficznym:
 | `--units`     | metric lub imperial       |
 | `--gui`       | uruchamia tryb graficzny  |
 | `--help`      | wyświetla pomoc           |
-
-## Przykładowy wynik
-
-```text
-Temperatura: 18.2°C
-Prędkość wiatru: 3.5 m/s
-```
 
 ## Obsługa błędów
 
