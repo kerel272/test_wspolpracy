@@ -1,5 +1,15 @@
 # Instrukcja obsługi programu Pogoda
 
+## Spis treści
+- [Opis programu](#1-opis-programu)
+- [Funkcjonalności programu](#2-funkcjonalności-programu)
+- [Wymagania](#3-wymagania)
+- [Uruchamianie programu](#4-uruchamianie-programu)
+- [Tryb tekstowy (CLI)](#5-tryb-tekstowy-cli)
+- [Tryb graficzny (GUI)](#6-tryb-graficzny-gui)
+- [Obsługa błędów](#7-obsługa-błędów)
+- [Przykład pełnego użycia](#8-przykład-pełnego-użycia)
+
 ## 1. Opis programu
 Program **Pogoda** to aplikacja napisana w języku Python, która umożliwia sprawdzenie aktualnej temperatury oraz prędkości wiatru dla wybranego miasta.  
 
