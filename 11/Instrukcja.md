@@ -1,9 +1,24 @@
 # Aplikacja „Pogoda”
 
-Prosta aplikacja do sprawdzania aktualnej temperatury i prędkości wiatru dla dowolnego miasta. Dane pobierane są z serwisu **wttr.in**.
+Aplikacja do sprawdzania aktualnej temperatury i prędkości wiatru dla dowolnego miasta. Dane pobierane są z serwisu **wttr.in**.
 
 ---
-
+# Spis treści
+- [Aplikacja „Pogoda”](#aplikacja-pogoda)
+  - [Funkcje aplikacji](#funkcje-aplikacji)
+  - [Wymagania](#wymagania)
+  - [Uruchamianie](#uruchamianie)
+    - [Uruchamianie w trybie graficznym (GUI)](#uruchamianie-w-trybie-graficznym-gui)
+    - [Uruchamianie w trybie terminalowym (CLI)](#uruchamianie-w-trybie-terminalowym-cli)
+  - [Jak działa aplikacja](#jak-działa-aplikacja)
+    - [1. Pobieranie danych pogodowych](#1-pobieranie-danych-pogodowych)
+    - [2. Przeliczanie jednostek](#2-przeliczanie-jednostek)
+    - [3. Obsługa trybu CLI](#3-obsługa-trybu-cli)
+    - [4. Obsługa trybu GUI](#4-obsługa-trybu-gui)
+    - [5. Obsługa błędów](#5-obsługa-błędów)
+  - [Struktura programu](#struktura-programu)
+  - [Najważniejsze cechy aplikacji](#najważniejsze-cechy-aplikacji)
+---
 ## Funkcje aplikacji
 
 - Pobieranie aktualnej pogody z wttr.in  
@@ -87,7 +102,7 @@ python app.py --help
 
 ## Jak działa aplikacja?
 
-Aplikacja korzysta z publicznego serwisu pogodowego **wttr.in**, który udostępnia dane w formacie JSON bez konieczności używania klucza API. Logika działania składa się z kilku etapów:
+Aplikacja korzysta z publicznego serwisu pogodowego **wttr.in**, który udostępnia dane w formacie JSON. Logika działania składa się z kilku etapów:
 
 ---
 
