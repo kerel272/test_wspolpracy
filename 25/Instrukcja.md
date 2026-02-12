@@ -1,5 +1,13 @@
 # Instrukcja obsługi programu do sprawdzania pogody
 
+## Spis treści
+1. [Opis programu](#opis-programu)
+2. [Wymagania techniczne](#wymagania-techniczne)
+3. [Funkcje programu](#funkcje-programu)
+4. [Działanie programu](#działanie-programu)
+5. [Tryb graficzny](#tryb-graficzny)
+6. [Tryb konsolowy](#tryb-konsolowy)
+
 ## Opis Programu
 Program pozwala na sprawdzenie temperatury i prędkości wiatru dla wybranego miasta korzystając z serwisu [wttr.in](wttr.in).
 
@@ -66,3 +74,5 @@ Po wpisanie do pola tekstowego `Miasto` - `Katowice`, wpisaniu do pola `Kraj` - 
 **Przykładowy wynik:**  
 Temperatura: -1.0°C  
 Wiatr 4.7 m/s  
+
+---------------------------------
