@@ -6,7 +6,7 @@
 | 1 | Analiza wymagań | Określenie funkcjonalności programu: pobieranie temperatury, prędkości wiatru, obsługa CLI i GUI, wybór jednostek | [??] |
 | 2 | Przygotowanie środowiska | Instalacja Pythona oraz biblioteki `requests` i konfiguracja projektu | [??] |
 | 3 | Implementacja pobierania danych | Napisanie funkcji pobierającej dane pogodowe z API | [??] |
-| 4 | Implementacja przetwarzania danych | Parsowanie danych z API i wyświetlanie temperatury oraz prędkości wiatru | [??] |
+| 4 | Implementacja przetwarzania danych | Pobranie danych o pogodzie z API oraz wyświetlenie temperatury i prędkości wiatru w programie | [??] |
 | 5 | Implementacja trybu CLI | Dodanie obsługi argumentów programu (`--city`, `--country`, `--units`) | [??] |
 | 6 | Implementacja trybu GUI | Utworzenie interfejsu graficznego przy użyciu biblioteki `tkinter` | [??] |
 | 7 | Obsługa błędów | Dodanie komunikatów błędów dla braku miasta, problemów z internetem itp. | [??] |
