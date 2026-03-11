@@ -1,4 +1,4 @@
-\# Harmonogram projektu – Program Pogoda
+# Harmonogram projektu – Program Pogoda
 
 
 
@@ -41,6 +41,7 @@
 | Dokumentacja | Opis obsługi interfejsu GUI | ?? |
 
 | Dokumentacja | Przygotowanie przykładowych uruchomień programu | ?? |
+
 
 
 
