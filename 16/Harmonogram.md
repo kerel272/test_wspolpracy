@@ -12,5 +12,3 @@
 | 8 | Dokumentacja | Przygotowanie instrukcji obsługi programu | [??] |
 
 ---
-**Podsumowanie:**
-Tabelę należy przekazać osobie o numerze wyższym w dzienniku w celu oszacowania i uzupełnienia czasów w kolumnie "Przewidywany Czas".
