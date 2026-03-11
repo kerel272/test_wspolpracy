@@ -1,7 +1,7 @@
 # Harmonogram projektu – aplikacja pogodowa w Pythonie
 
 ## 1. Analiza wymagań
-**Czas:** [??]
+**Czas:** [20 min]
 
 **Zadania:**
 - określenie funkcjonalności aplikacji (pobieranie pogody dla miasta)
@@ -14,7 +14,7 @@
 ---
 
 ## 2. Projektowanie aplikacji
-**Czas:** [??]
+**Czas:** [40 min]
 
 **Zadania:**
 - zaprojektowanie struktury programu
@@ -28,7 +28,7 @@
 ---
 
 ## 3. Implementacja pobierania danych pogodowych
-**Czas:** [??]
+**Czas:** [50 min]
 
 **Zadania:**
 - napisanie funkcji `get_weather()`
@@ -41,7 +41,7 @@
 ---
 
 ## 4. Implementacja trybu CLI
-**Czas:** [??]
+**Czas:** [40 min]
 
 **Zadania:**
 - konfiguracja `argparse`
@@ -56,7 +56,7 @@
 ---
 
 ## 5. Implementacja GUI
-**Czas:** [??]
+**Czas:** [45 min]
 
 **Zadania:**
 - utworzenie okna aplikacji w `tkinter`
@@ -71,7 +71,7 @@
 ---
 
 ## 6. Testowanie aplikacji
-**Czas:** [??]
+**Czas:** [30 min]
 
 **Zadania:**
 - testowanie poprawnych i błędnych nazw miast
@@ -83,7 +83,7 @@
 ---
 
 ## 7. Dokumentacja projektu
-**Czas:** [??]
+**Czas:** [35 min]
 
 **Zadania:**
 - opis działania aplikacji
