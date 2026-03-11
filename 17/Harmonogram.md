@@ -15,4 +15,3 @@
 | 11 | Finalizacja projektu | Ostateczne sprawdzenie i przygotowanie programu do oddania | 15 min |
 
 ---
-**Łączny szacowany czas:** ok. 6 godzin i 15 minut
