@@ -1,0 +1,14 @@
+# Harmonogram projektu – Aplikacja Pogoda
+
+| Etap              | Zadanie                                                                 | Czas |
+|------------------|-------------------------------------------------------------------------|------|
+| Analiza wymagań  | Określenie funkcjonalności aplikacji: pobieranie danych pogodowych (temperatura, wiatr), obsługa CLI i GUI oraz zmiana jednostek | ??   |
+| Projektowanie    | Zaplanowanie struktury programu oraz podział na funkcje (np. get_weather, display_gui, main) | ??   |
+| Implementacja    | Przygotowanie podstawowego szkieletu aplikacji oraz import potrzebnych bibliotek | ??   |
+| Implementacja    | Stworzenie funkcji do pobierania danych pogodowych z zewnętrznego API   | ??   |
+| Implementacja    | Obsługa i przetwarzanie danych JSON oraz konwersja jednostek            | ??   |
+| Implementacja    | Utworzenie prostego interfejsu graficznego użytkownika                  | ??   |
+| Implementacja    | Dodanie obsługi błędów (np. brak połączenia, nieprawidłowe dane)        | ??   |
+| Testowanie       | Sprawdzenie poprawności działania aplikacji oraz GUI                    | ??   |
+| Wdrożenie        | Przygotowanie aplikacji do uruchomienia i instalacji                    | ??   |
+| Dokumentacja     | Opracowanie krótkiej instrukcji obsługi programu                        | ??   |
