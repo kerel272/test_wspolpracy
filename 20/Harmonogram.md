@@ -7,7 +7,7 @@
 | **Projekt** | Opracowanie ogólnej struktury aplikacji oraz podziału na funkcje odpowiedzialne za logikę programu, interfejs i uruchamianie | 45 min |
 | **Projekt** | Zaplanowanie sposobu komunikacji z API oraz przetwarzania odpowiedzi w formacie JSON | 30 min |
 | **Implementacja** | Utworzenie pliku głównego programu oraz dodanie wymaganych bibliotek (requests, argparse, tkinter) | 15 min |
-| **Implementacja** | Implementacja funkcji pobierającej dane pogodowe z wybranego serwisu internetowego | 1h 30min |
+| **Implementacja** | Implementacja funkcji pobierającej dane pogodowe z wybranego serwisu internetowego | 1.5 h |
 | **Implementacja** | Dodanie obsługi przeliczania jednostek temperatury oraz prędkości wiatru | 45 min |
 | **Implementacja** | Zaimplementowanie obsługi argumentów wiersza poleceń umożliwiającej korzystanie z programu w trybie CLI | 1h |
 | **Implementacja** | Stworzenie prostego interfejsu graficznego z wykorzystaniem biblioteki tkinter | 2h |
